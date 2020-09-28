@@ -11,7 +11,7 @@ git clone https://github.com/asdprogrammer/CAS-Ruby-Project.git
 Click on "Code" and "Download ZIP"
 #### To unzip the zip file from the command line, run:
 ```bash
-unzip path/to/CAS-Ruby-Project.zip
+unzip path/to/zip/file.zip
 ```
 
 ## Requirements
@@ -29,6 +29,6 @@ gem install curses
 ## Running the code
 ### To run the code from the command line, run:
 ```bash
-ruby path/to/CAS-Ruby-Project/game.rb
+ruby path/to/folder/game.rb
 ```
 ### Or click on the executable "play" file in the folder
