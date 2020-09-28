@@ -5,10 +5,10 @@
 require 'curses'
 
 
-if RUBY_VERSION[0..2] != '2.0'
-  puts 'Please use Ruby version 2.0'
-  exit
-end
+#if RUBY_VERSION[0..2] != '2.0'
+#  puts 'Please use Ruby version 2.0'
+#  exit
+#end
 
 Curses.init_screen
 Curses.start_color
