@@ -1,5 +1,4 @@
 # CAS-Ruby-Project
-Project for CAS: "Learn a new programming language (Ruby)"\
 This game is a copy of the popular snake game.
 
 ## Downloading
