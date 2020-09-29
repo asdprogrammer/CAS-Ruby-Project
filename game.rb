@@ -39,7 +39,7 @@ snake_speed = 10 # blocks per second
 def new_apple_pos
   apple_pos = nil
   loop do
-    apple_pos = {'x' => rand(1..$width-2), 'y' => rand(0..$height-2)}
+    apple_pos = {'x' => rand(1..$width-2), 'y' => rand(1..$height-2)}
     break if !$last_positions.include?(apple_pos)
   end
   return apple_pos
