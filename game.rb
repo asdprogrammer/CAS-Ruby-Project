@@ -35,6 +35,17 @@ box_horizontal_char = '-'
 
 snake_speed = 10 # blocks per second
 
+
+def new_apple_pos
+  apple_pos = nil
+  loop do
+    apple_pos = {'x' => rand(1..$width-2), 'y' => rand(0..$height-2)}
+    break if !$last_positions.include?(apple_pos)
+  end
+  return apple_pos
+end
+
+
 def reset
   $snake_length = 5
   $snake_pos = {'x' => ($width / 2).to_i, 'y' => ($height / 2).to_i}
@@ -46,7 +57,7 @@ def reset
     $last_positions.push({'x' => $snake_pos['x'] - i, 'y' => $snake_pos['y']})
   end
 
-  $apple_pos = {'x' => rand(1..$width-2), 'y' => rand(0..$height-2)}
+  $apple_pos = new_apple_pos
 
   $score = 0
   $game_over = false
@@ -64,7 +75,7 @@ begin
     start_time = Time.now.to_f
     $width = Curses.cols
     $height = Curses.lines
-    
+
     # controls
     key = win.getch
       
@@ -113,8 +124,7 @@ begin
         if $snake_pos == $apple_pos
           $snake_length += 1
           $score += 1
-          $apple_pos['x'] = rand(1..$width-2)
-          $apple_pos['y'] = rand(1..$height-2)
+          $apple_pos = new_apple_pos
         end
 
         # bonk
