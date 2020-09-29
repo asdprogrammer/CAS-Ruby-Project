@@ -62,7 +62,9 @@ begin
 
   loop do
     start_time = Time.now.to_f
-
+    $width = Curses.cols
+    $height = Curses.lines
+    
     # controls
     key = win.getch
       
