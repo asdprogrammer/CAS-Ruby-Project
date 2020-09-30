@@ -2,13 +2,13 @@
 This game is a copy of the popular snake game.
 
 ## Downloading
-### To download from command line, run:
+### To download from the command line:
 ```bash
 git clone https://github.com/asdprogrammer/CAS-Ruby-Project.git
 ```
 ### To download as zip file:
 Click on "Code" and "Download ZIP"
-#### To unzip the zip file from the command line, run:
+#### To unzip the zip file from the command line:
 ```bash
 unzip path/to/zip/file.zip
 ```
@@ -16,7 +16,7 @@ unzip path/to/zip/file.zip
 ## Requirements
 Ruby\
 The "curses" gem
-### To see which version of ruby you have, run:
+### To see which version of ruby you have:
 ```bash
 ruby --version
 ```
