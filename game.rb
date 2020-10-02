@@ -28,12 +28,10 @@ frame_count = 0
 frame_rate = 100
 
 snake_char = '□'
-apple_char = 'o'
+apple_char = '*'
 
 box_vertical_char = '|'
 box_horizontal_char = '-'
-
-snake_speed = 10 # blocks per second
 
 
 def new_apple_pos
@@ -50,6 +48,7 @@ def reset
   $snake_length = 5
   $snake_pos = {'x' => ($width / 2).to_i, 'y' => ($height / 2).to_i}
   $snake_direction = {'x' => 1, 'y' => 0}
+  $snake_speed = 10 # blocks per second
 
   $last_positions = []
   # starting body
@@ -98,7 +97,7 @@ begin
 
     if !$game_over
       # update stuff
-      if frame_count % (frame_rate / snake_speed) == 0
+      if frame_count % (frame_rate / $snake_speed).to_i == 0
         win.clear
         win.box(box_vertical_char, box_horizontal_char)
 
@@ -124,6 +123,7 @@ begin
         if $snake_pos == $apple_pos
           $snake_length += 1
           $score += 1
+          $snake_speed += 0.1
           $apple_pos = new_apple_pos
         end
 
